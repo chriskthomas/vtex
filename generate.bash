@@ -18,7 +18,7 @@ cd -
 tlmgr update --self
 
 # install requred
-tlmgr install latex-bin tools kvoptions etoolbox pdftexcmds infwarerr everysel parskip hyperref geometry sectsty ragged2e enumitem fontawesome xifthen ifmtarg inter
+tlmgr install latex-bin tools kvoptions etoolbox pdftexcmds infwarerr everysel parskip hyperref geometry sectsty ragged2e enumitem fontawesome xifthen ifmtarg inter xkeyval fontaxes greek-fontenc ly1 cbfonts ec
 
 # package into final archive
 tar -czf "vtex.tar.gz" "${TEXDIR}" && echo "vtex.tar.gz generated (exit: $?)" || echo "vtex.tar.gz generation failed (exit: $?)"
