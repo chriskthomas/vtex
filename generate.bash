@@ -18,7 +18,10 @@ cd -
 tlmgr update --self
 
 # install requred
-tlmgr install latex-bin tools kvoptions etoolbox pdftexcmds infwarerr everysel parskip hyperref geometry sectsty ragged2e enumitem fontawesome xifthen ifmtarg inter xkeyval fontaxes greek-fontenc ly1 cbfonts ec
+tlmgr install latex-bin tools fontspec kvoptions etoolbox pdftexcmds infwarerr parskip hyperref geometry sectsty ragged2e enumitem fontawesome xifthen ifmtarg inter xkeyval
+
+# generate font names database for lualatex (speedup generation later)
+luaotfload-tool --update && echo "LuaLaTeX font database generated (exit: $?)" || echo "LuaLaTeX font database generation failed (exit: $?)"
 
 # package into final archive
 tar -czf "vtex.tar.gz" "${TEXDIR}" && echo "vtex.tar.gz generated (exit: $?)" || echo "vtex.tar.gz generation failed (exit: $?)"
